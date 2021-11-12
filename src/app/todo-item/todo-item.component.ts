@@ -9,7 +9,7 @@ import {Todo} from '../shared/todo';
 })
 export class TodoItemComponent implements OnInit {
 
-  @Input() todo: Todo;
+  @Input() todo?: Todo;
   @Output() completed = new EventEmitter();
 
   constructor() {

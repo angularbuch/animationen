@@ -9,7 +9,7 @@ import {filter} from 'rxjs/operators';
 })
 export class AutoCalculationComponent {
 
-  @ViewChild(PanelComponent) firstPanel: PanelComponent;
+  @ViewChild(PanelComponent) firstPanel!: PanelComponent;
 
   constructor(private routerAnimationEventsService: RouterAnimationEventsService) {
     this.routerAnimationEventsService.listenForEvents()

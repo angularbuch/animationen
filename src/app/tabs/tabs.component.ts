@@ -21,7 +21,7 @@ import {animate, AnimationEvent, state, style, transition, trigger} from '@angul
   ]
 })
 export class TabComponent {
-  @Input() title: string;
+  @Input() title = '';
   active: boolean;
 
 
@@ -53,13 +53,13 @@ export class TabComponent {
 })
 export class TabsComponent implements AfterContentInit {
 
-  @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
+  @ContentChildren(TabComponent) tabs!: QueryList<TabComponent>;
 
   ngAfterContentInit() {
     this.tabs.first.active = true;
   }
 
-  activate(tab) {
+  activate(tab: TabComponent) {
     for (const tab of this.tabs.toArray()) {
       tab.active = false;
     }

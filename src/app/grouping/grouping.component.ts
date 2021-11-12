@@ -15,6 +15,10 @@ export class GroupingComponent implements OnInit {
   constructor() {
   }
 
+  showBox1 = false;
+  showBox2 = false;
+  showBox3 = false;
+
   ngOnInit() {
   }
 

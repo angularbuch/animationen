@@ -6,7 +6,7 @@ import {ChangeDetectorRef, Component} from '@angular/core';
   styleUrls: ['./basics.component.css']
 })
 export class BasicsComponent {
-  showTabs: boolean;
+  showTabs = false;
 
 
   created = Math.random();
